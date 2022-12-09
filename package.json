@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
+    "lint": "eslint src/ --fix"
   },
   "keywords": [
     "react",
@@ -23,8 +25,8 @@
     "babel-loader": "^8.2.2",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.8.0",
