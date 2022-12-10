@@ -4,7 +4,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 24px;
-	border-bottom: 1px solid var(--very-light-pink);
+	border-bottom: 1px solid var(--black);
 }
 .menu {
 	display: none;
@@ -23,6 +23,7 @@ nav {
 }
 .navbar-left {
 	display: flex;
+	align-items: center;
 }
 .navbar-left ul {
 	margin-left: 12px;
@@ -30,7 +31,7 @@ nav {
 .navbar-left ul li a,
 .navbar-right ul li a {
 	text-decoration: none;
-	color: var(--very-light-pink);
+	color: var(--black);
 	border: 1px solid var(--white);
 	padding: 8px;
 	border-radius: 8px;
@@ -41,7 +42,7 @@ nav {
 	color: var(--hospital-green);
 }
 .navbar-email {
-	color: var(--very-light-pink);
+	color: var(--black);
 	font-size: var(--sm);
 	margin-right: 12px;
 }
