@@ -4,7 +4,7 @@ import addToCartImage from '@icons/bt_add_to_cart.svg';
 import { IMAGE_NOT_FOUND } from '../common/constants';
 import { AppContext } from '../context/AppContext';
 
-const ProductItem = ({ images, price, title, id }) => {
+const ProductItem = ({ image, price, title, id } = []) => {
   const { addProductToCart } = useContext(AppContext);
 
   const handleClick = (product) => {
@@ -14,7 +14,7 @@ const ProductItem = ({ images, price, title, id }) => {
   return (
     <div className='ProductItem'>
       <img
-        src={images[0] === '' ? IMAGE_NOT_FOUND : images[0]}
+        src={image === '' ? IMAGE_NOT_FOUND : image}
         alt={title}
       />
       <div className='product-info'>
@@ -22,7 +22,7 @@ const ProductItem = ({ images, price, title, id }) => {
           <p>{`$${price}`}</p>
           <p>{title}</p>
         </div>
-        <figure onClick={() => handleClick({ images, price, title, id })}>
+        <figure onClick={() => handleClick({ image, price, title, id })}>
           <img
             src={addToCartImage}
             alt=''

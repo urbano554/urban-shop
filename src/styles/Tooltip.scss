@@ -1,0 +1,38 @@
+@use 'vars';
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--neutral-one);
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px 0;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.tooltip .tiptext::after {
+  content: '';
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.tooltip:hover .tiptext {
+  visibility: visible;
+}
+
+.tooltip.left .tiptext {
+  top: -5px;
+  right: 110%;
+}
+.tooltip.left .tiptext::after {
+  margin-top: -5px;
+  top: 50%;
+  left: 100%;
+  border-color: transparent transparent transparent #2e2e2e;
+}
