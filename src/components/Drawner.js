@@ -12,6 +12,8 @@ const Drawner = ({ children, isOpen, setIsOpen }) => (
       className='drawer-toggle'
       name='drawer-toggle'
       checked={isOpen}
+      defaultValue={false}
+      readOnly
     />
     <img
       src={menu}

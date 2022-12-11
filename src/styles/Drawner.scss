@@ -38,6 +38,7 @@
   background: var(--black);
   padding: 20px;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 
 /* checked styles (menu open state) */
