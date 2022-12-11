@@ -7,6 +7,8 @@ import { PRODUCT_LIST_API } from '../common/constants';
 const ProductList = () => {
   const products = useGetProducts(PRODUCT_LIST_API);
 
+  console.log(products);
+
   return (
     <section className='main-container'>
       <div className='ProductList'>

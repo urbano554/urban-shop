@@ -3,7 +3,7 @@ import '@styles/OrderItem.scss';
 import close from '@icons/icon_close.png';
 import { AppContext } from '../context/AppContext';
 
-const OrderItem = ({ title, price, images, id }) => {
+const OrderItem = ({ title, price, image, id }) => {
   const { removeProductFromCart } = useContext(AppContext);
 
   const handleRemove = () => {
@@ -13,7 +13,7 @@ const OrderItem = ({ title, price, images, id }) => {
   return (
     <div className='OrderItem'>
       <figure>
-        <img src={images[0]} />
+        <img src={image} />
       </figure>
       <p>{title}</p>
       <p>${price}</p>
