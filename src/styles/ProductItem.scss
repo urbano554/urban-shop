@@ -34,16 +34,15 @@
   margin-bottom: 0;
   color: var(--black);
 }
-.shop-car-container {
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+.shopping-button {
+  transition-duration: var(--transition-fast);
   padding: 5px;
-  border: 1px solid var(--sky-blue);
+  border: 1px solid var(--primary-one);
   border-radius: 2px;
   cursor: pointer;
 }
-.shop-car-container:hover {
-  background-color: var(--sky-blue);
+.shopping-button:hover {
+  background-color: var(--primary-one);
 }
 
 @media (max-width: 640px) {

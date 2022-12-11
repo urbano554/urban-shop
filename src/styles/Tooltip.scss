@@ -26,6 +26,8 @@
   visibility: visible;
 }
 
+// tooltiop left direction
+
 .tooltip.left .tiptext {
   top: -5px;
   right: 110%;
@@ -35,4 +37,18 @@
   top: 50%;
   left: 100%;
   border-color: transparent transparent transparent #2e2e2e;
+}
+
+// tooltiop bottom direction
+
+.tooltip.bottom .tiptext{
+  margin-left: -60px;
+  top: 150%;
+  left: 50%;
+}
+.tooltip.bottom .tiptext::after{
+  margin-left: -5px;
+  bottom: 100%;
+  left: 50%;
+  border-color: transparent transparent #2E2E2E transparent;
 }
