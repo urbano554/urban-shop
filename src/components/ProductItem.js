@@ -11,10 +11,11 @@ import addToCartImage from '@icons/shopping-car-solid.svg';
 import '@styles/ProductItem.scss';
 
 const ProductItem = ({ image, price, title, id } = []) => {
-  const { addProductToCart } = useContext(AppContext);
+  const { addProductToCart, state } = useContext(AppContext);
 
   const handleClick = (product) => {
     addProductToCart(product);
+    
   };
 
   return (
@@ -28,7 +29,7 @@ const ProductItem = ({ image, price, title, id } = []) => {
           <p>{`$${price}`}</p>
           <p>{title}</p>
         </div>
-        <Tooltip text='añadir al carrito' >
+        <Tooltip text='añadir al carrito'>
           <figure
             className='shopping-button'
             onClick={() => handleClick({ image, price, title, id })}
