@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
 const initialState = {
-  cart: [],
+  cart: JSON.parse(localStorage.getItem('myShopingCar')) || [],
 };
 
 export const useInitialState = () => {
   const [state, setState] = useState(initialState);
-
+  localStorage.setItem('myShopingCar', JSON.stringify(state.cart))
+ 
   const addProductToCart = (payload) => {
     setState({
       cart: [...state.cart, payload],

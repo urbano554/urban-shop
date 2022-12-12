@@ -4,8 +4,6 @@ import { AppContext } from '../context/AppContext';
 
 import OrderItem from '@components/OrderItem';
 
-import arrow from '@icons/flechita.svg';
-
 import '@styles/MyOrder.scss';
 
 const MyOrder = () => {
@@ -22,6 +20,11 @@ const MyOrder = () => {
     return totalPrice;
   };
 
+  // const previousShopingCar =
+  //   JSON.parse(localStorage.getItem('myShopingCar')) || [];
+  // console.log('previousShopingCar =>', previousShopingCar);
+  // console.log('state from MyOrde =>', state.cart);
+
   return (
     <aside className='MyOrder'>
       <div className='title-container'>
@@ -29,7 +32,6 @@ const MyOrder = () => {
       </div>
       <div className='my-order-content'>
         {state.cart.map((props) => {
-          console.log(props);
           return (
             <OrderItem
               {...props}
