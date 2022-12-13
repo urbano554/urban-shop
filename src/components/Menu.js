@@ -1,5 +1,3 @@
-import React from 'react';
-
 import sunSvg from '@icons/sun.svg';
 import moonSvg from '@icons/moon.svg';
 

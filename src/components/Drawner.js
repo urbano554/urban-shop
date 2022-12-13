@@ -1,5 +1,3 @@
-import React from 'react';
-
 import menu from '@icons/icon_menu.svg';
 
 import '../styles/Drawner.scss';
