@@ -20,13 +20,8 @@ const MyOrder = ({ scroll }) => {
     return totalPrice;
   };
 
-  // const previousShopingCar =
-  //   JSON.parse(localStorage.getItem('myShopingCar')) || [];
-  // console.log('previousShopingCar =>', previousShopingCar);
-  // console.log('state from MyOrde =>', state.cart);
-
   return (
-    <aside className={`${scroll ? 'fixed' : ''} MyOrder`}>
+    <aside className={`${scroll ? 'fixed' : ''} MyOrder scroll-container`}>
       <div className='title-container'>
         <p className='title'>Mis artículos</p>
       </div>

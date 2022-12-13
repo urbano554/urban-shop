@@ -5,3 +5,28 @@ body {
 	margin: 0;
 	font-family: 'Quicksand', sans-serif;
 }
+
+.scroll-container::-webkit-scrollbar {
+	-webkit-appearance: none;
+  }
+  
+  .scroll-container::-webkit-scrollbar:vertical {
+	width:10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-button:increment,.scroll-container::-webkit-scrollbar-button {
+	display: none;
+  } 
+  
+  .scroll-container::-webkit-scrollbar:horizontal {
+	height: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+	background-color: var(--white);
+	border-radius: 20px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+	border-radius: 10px;  
+  }
