@@ -14,8 +14,8 @@
     "react",
     "javascript"
   ],
-  "author": "Oscar Barajas <oscar@platzi.com>",
-  "license": "MIT",
+  "author": "Luis Urbano <luis554urbano@gmail.com>",
+  "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.20.5",
     "@babel/plugin-transform-runtime": "^7.19.6",
