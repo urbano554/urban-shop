@@ -53,7 +53,9 @@ const listOfRules = [
 
 const listOfPlugins = [
   new HtmlWebpackPlugin({
+    inject: true,
     template: './public/index.html',
+    filename: './index.html',
   }),
   new MiniCssExtractPlugin({
     filename: '[name].css',
