@@ -1,8 +1,10 @@
-import React from 'react';
 import ProductItem from '@components/ProductItem';
-import '@styles/ProductList.scss';
+
 import { useGetProducts } from '../hooks/useGetProducts';
+
 import { PRODUCT_LIST_API } from '../common/constants';
+
+import '@styles/ProductList.scss';
 
 const ProductList = () => {
   const products = useGetProducts(PRODUCT_LIST_API);

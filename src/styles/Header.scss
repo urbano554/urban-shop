@@ -9,10 +9,11 @@ nav {
 .fixed-nav {
   position: fixed;
   background-color: var(--white);
-  border-bottom: none;
+  border-bottom: transparent;
   z-index: 1;
   top: 0;
   width: 100%;
+  transition: var(--transition-slow)
 }
 .menu {
   display: none;

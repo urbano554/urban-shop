@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/Tooltip.scss';
 
 export const Tooltip = ({ children, text = 'prueba', position = 'left' }) => {
