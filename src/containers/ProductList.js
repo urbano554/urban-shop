@@ -7,10 +7,14 @@ import { PRODUCT_LIST_API } from '../common/constants';
 const ProductList = () => {
   const products = useGetProducts(PRODUCT_LIST_API);
 
+  const filterProducts = products.filter(({ images }) =>
+    images[0].includes('https://')
+  );
+
   return (
     <section className='main-container'>
       <div className='ProductList'>
-        {products?.map((props) => {
+        {filterProducts?.map((props) => {
           return (
             <ProductItem
               {...props}

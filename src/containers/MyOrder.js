@@ -6,7 +6,7 @@ import OrderItem from '@components/OrderItem';
 
 import '@styles/MyOrder.scss';
 
-const MyOrder = () => {
+const MyOrder = ({ scroll }) => {
   const { state } = useContext(AppContext);
 
   const sumProducts = () => {
@@ -26,7 +26,7 @@ const MyOrder = () => {
   // console.log('state from MyOrde =>', state.cart);
 
   return (
-    <aside className='MyOrder'>
+    <aside className={`${scroll ? 'fixed' : ''} MyOrder`}>
       <div className='title-container'>
         <p className='title'>Mis artículos</p>
       </div>
