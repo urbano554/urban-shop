@@ -12,6 +12,7 @@
   border-radius: 6px;
   border: 1px, solid var(--black);
   z-index: 1;
+  overflow: auto;
 }
 .MyOrder p {
   color: var(--white) !important;
