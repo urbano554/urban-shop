@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import { AppContext } from '../context/AppContext';
 
@@ -20,13 +20,25 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
   const { state } = useContext(AppContext);
+  const [scroll, setScroll] = useState(false);
+
+  const handleNavigation = useCallback(() => {
+    setScroll(!window.scrollY <= 0);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleNavigation);
+    return () => {
+      window.removeEventListener('scroll', handleNavigation);
+    };
+  }, [handleNavigation]);
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
   return (
-    <nav>
+    <nav className={scroll ? 'fixed-nav' : ''}>
       <Drawner
         isOpen={isOpen}
         setIsOpen={setIsOpen}
@@ -115,7 +127,7 @@ export const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder />}
+      {toggleOrders && <MyOrder scroll={scroll}/>}
     </nav>
   );
 };

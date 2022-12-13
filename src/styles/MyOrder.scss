@@ -47,6 +47,11 @@
   transition: var(--transition-fast) !important;
   color: var(--black) !important;
 }
+
+.fixed {
+  position: fixed;
+}
+
 @media (max-width: 640px) {
   .MyOrder {
     width: 100%;
