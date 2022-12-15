@@ -2,13 +2,11 @@ import { useContext } from 'react';
 
 import { AppContext } from '../context/AppContext';
 
-import { Tooltip } from '@components/Tooltip';
-
 import addToCartImage from '@icons/shopping-car-solid.svg';
 
 import '@styles/ProductItem.scss';
 
-const ProductItem = ({ images, price, title, id } = []) => {
+const ProductItem = ({ image, price, title, id } = []) => {
   const { addProductToCart, state } = useContext(AppContext);
 
   const handleClick = (product) => {
@@ -18,7 +16,7 @@ const ProductItem = ({ images, price, title, id } = []) => {
   return (
     <div className='ProductItem'>
       <img
-        src={images[0]}
+        src={image}
         alt={title}
       />
       <div className='product-info'>
@@ -26,17 +24,16 @@ const ProductItem = ({ images, price, title, id } = []) => {
           <p>{`$${price}`}</p>
           <p>{title}</p>
         </div>
-        <Tooltip text='añadir al carrito'>
-          <figure
-            className='shopping-button'
-            onClick={() => handleClick({ images, price, title, id })}
-          >
-            <img
-              src={addToCartImage}
-              alt='add-to-cart-image'
-            />
-          </figure>
-        </Tooltip>
+
+        <figure
+          className='shopping-button'
+          onClick={() => handleClick({ image, price, title, id })}
+        >
+          <img
+            src={addToCartImage}
+            alt='add-to-cart-image'
+          />
+        </figure>
       </div>
     </div>
   );
