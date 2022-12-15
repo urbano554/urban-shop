@@ -37,8 +37,8 @@
 .shopping-button {
   transition-duration: var(--transition-fast);
   padding: 5px;
-  border: 1px solid var(--primary-one);
-  border-radius: 2px;
+ 
+  border-radius: 10px;
   cursor: pointer;
 }
 .shopping-button:hover {
