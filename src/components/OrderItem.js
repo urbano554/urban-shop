@@ -1,7 +1,10 @@
 import { useContext } from 'react';
-import '@styles/OrderItem.scss';
-import close from '@icons/icon_close.png';
+
 import { AppContext } from '../context/AppContext';
+
+import close from '@icons/icon_close.png';
+
+import '@styles/OrderItem.scss';
 
 const OrderItem = ({ title, price, image, id }) => {
   const { removeProductFromCart } = useContext(AppContext);

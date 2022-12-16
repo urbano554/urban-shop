@@ -3,7 +3,7 @@ import { useGetProducts } from '../hooks/useGetProducts';
 import ProductItem from '@components/ProductItem';
 import { SkeletonCard } from '@components/SkeletonCard';
 
-import { PRODUCT_LIST_API } from '../common/constants';
+import { PRODUCT_LIST_API } from '@constants';
 
 import '@styles/ProductList.scss';
 

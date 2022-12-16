@@ -2,12 +2,13 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 
 import { AppContext } from '../context/AppContext';
 
-import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
+
+import Menu from './Menu';
 import { Tooltip } from './Tooltip';
 import Drawner from './Drawner';
 
-import { NAVBAR_FIELDS } from '../common/constants';
+import { NAVBAR_FIELDS } from '@constants';
 
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 import sunSvg from '@icons/sun.svg';
@@ -127,7 +128,7 @@ export const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder scroll={scroll}/>}
+      {toggleOrders && <MyOrder scroll={scroll} />}
     </nav>
   );
 };

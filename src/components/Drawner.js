@@ -1,7 +1,7 @@
 import menu from '@icons/icon_menu.svg';
 
-import '../styles/Drawner.scss';
-import '../styles/Header.scss';
+import '@styles/Drawner.scss';
+import '@styles/Header.scss';
 
 const Drawner = ({ children, isOpen, setIsOpen }) => (
   <>
