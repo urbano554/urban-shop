@@ -1,0 +1,24 @@
+.skeleton-card-container {
+  z-index: 0;
+}
+
+.skeleton-card-image {
+  width: 240px;
+  height: 240px;
+}
+
+.skeleton-product-info-container {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 20px;
+}
+
+.skeleton-product-info-items {
+  width: 100%;
+}
+
+.skeleton-shopping-button {
+  width: 35px;
+  height: 35px;
+}
