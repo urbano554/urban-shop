@@ -13,6 +13,7 @@
   border: 1px, solid var(--black);
   z-index: 1;
   overflow: auto;
+  position: fixed;
 }
 .MyOrder p {
   color: var(--white) !important;
