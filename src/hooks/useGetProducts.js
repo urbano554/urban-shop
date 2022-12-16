@@ -4,15 +4,18 @@ import axios from 'axios';
 
 export const useGetProducts = (API) => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getProducts = async () => {
     const response = await axios(API);
-    setProducts(response?.data);
+    const { data = [] } = await response;
+    setProducts(data);
+    setLoading(false);
   };
 
   useEffect(() => {
     getProducts();
   }, []);
 
-  return products;
+  return { products, loading };
 };

@@ -8,6 +8,8 @@ import Home from '@pages/Home';
 
 import NotFound from '@pages/NotFound';
 
+import { SkeletonTheme } from 'react-loading-skeleton';
+
 import { useInitialState } from '../hooks/useInitialState';
 
 import '@styles/global.css';
@@ -17,21 +19,23 @@ const App = () => {
 
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
-        <Layout>
-          <Switch>
-            <Route
-              exact
-              path='/'
-              component={Home}
-            />
-            <Route
-              path='*'
-              component={NotFound}
-            />
-          </Switch>
-        </Layout>
-      </BrowserRouter>
+      <SkeletonTheme baseColor="#0d0922" highlightColor="#444">
+        <BrowserRouter>
+          <Layout>
+            <Switch>
+              <Route
+                exact
+                path='/'
+                component={Home}
+              />
+              <Route
+                path='*'
+                component={NotFound}
+              />
+            </Switch>
+          </Layout>
+        </BrowserRouter>
+      </SkeletonTheme>
     </AppContext.Provider>
   );
 };
