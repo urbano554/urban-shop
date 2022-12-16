@@ -10,6 +10,7 @@ const ListOfAlias = {
   '@styles': path.resolve(__dirname, 'src/styles/'),
   '@icons': path.resolve(__dirname, 'src/assets/icons/'),
   '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+  '@constants': path.resolve(__dirname, 'src/common/constants'),
 };
 
 const listOfRules = [
