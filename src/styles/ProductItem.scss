@@ -37,12 +37,13 @@
 .shopping-button {
   transition-duration: var(--transition-fast);
   padding: 5px;
- 
+
   border-radius: 10px;
   cursor: pointer;
 }
 .shopping-button:hover {
   background-color: var(--primary-one);
+  color: white;
 }
 
 @media (max-width: 640px) {
