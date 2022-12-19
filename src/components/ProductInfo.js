@@ -1,5 +1,6 @@
-import '@styles/ProductInfo.scss';
 import addToCart from '@icons/bt_add_to_cart.svg';
+
+import '@styles/ProductInfo.scss';
 
 const ProductInfo = () => {
 	return (

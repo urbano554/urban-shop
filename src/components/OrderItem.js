@@ -4,6 +4,7 @@ import { AppContext } from '../context/AppContext';
 
 import { MinusIcon } from '@icons/MinusIcon';
 import { PlusIcon } from '@icons/PlusIcon';
+
 import close from '@icons/icon_close.png';
 
 import '@styles/OrderItem.scss';
