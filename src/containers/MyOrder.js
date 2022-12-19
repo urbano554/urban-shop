@@ -41,7 +41,7 @@ const MyOrder = ({ scroll }) => {
           </p>
           <p>${sumProducts()}</p>
         </div>
-        <button className='primary-button'>Checkout</button>
+        <button className='primary-button'>Comprar</button>
       </div>
     </aside>
   );

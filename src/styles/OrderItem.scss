@@ -1,28 +1,50 @@
 @import 'vars';
 
 .OrderItem {
-	display: grid;
-	grid-template-columns: auto 1fr auto auto;
-	gap: 16px;
-	margin-bottom: 24px;
-	align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  align-items: center;
 }
 .OrderItem figure {
-	margin: 0;
+  margin: 0;
 }
 .OrderItem > img {
-	cursor: pointer;
+  cursor: pointer;
 }
 .OrderItem figure img {
-	width: 70px;
-	height: 70px;
-	border-radius: 20px;
-	object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 .OrderItem p:nth-child(2) {
-	color: var(--black);
+  color: var(--black);
 }
 .OrderItem p:nth-child(3) {
-	font-size: var(--md);
-	font-weight: bold;
+  font-size: var(--md);
+  font-weight: bold;
+}
+
+.counter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.counter-container p {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.counter-container button:hover {
+  opacity: 0.5;
+}
+
+.counter-container button {
+  width: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-one);
 }

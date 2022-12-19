@@ -2,8 +2,9 @@ import { useContext } from 'react';
 
 import { AppContext } from '../context/AppContext';
 
-import addToCartImage from '@icons/shopping-car-solid.svg';
+import { ShoppingCar } from '../assets/icons/ShoppingCar';
 
+import 'react-toastify/dist/ReactToastify.css';
 import '@styles/ProductItem.scss';
 
 const ProductItem = ({ image, price, title, id } = []) => {
@@ -29,10 +30,7 @@ const ProductItem = ({ image, price, title, id } = []) => {
           className='shopping-button'
           onClick={() => handleClick({ image, price, title, id })}
         >
-          <img
-            src={addToCartImage}
-            alt='add-to-cart-image'
-          />
+          <ShoppingCar />
         </figure>
       </div>
     </div>
